@@ -1,10 +1,24 @@
 {
   "name": "codenula-embed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript library to display codenula chatbot on your website",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+  "type": "git",
+  "url": "git+https://github.com/nishant-metadesignsolutions/codenula-chatembed.git"
+},
+"keywords": [
+  "chatbot",
+  "embed",
+  "javascript",
+  "web",
+  "codenula"
+],
+"publishConfig": {
+  "access": "public"
+},
   "scripts": {
     "dev": "cross-env NODE_ENV=development rollup --watch --config rollup.config.js",
     "build": "cross-env NODE_ENV=production rollup --config rollup.config.js",
@@ -12,7 +26,6 @@
     "lint-fix": "eslint --fix \"src/**/*.ts*\"",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
-    "prepare": "husky install",
     "start": "node server.js"
   },
   "license": "MIT",
