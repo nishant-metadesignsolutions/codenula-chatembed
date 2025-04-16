@@ -33,7 +33,7 @@ export const DeleteButton = (props: SendButtonProps) => {
   const isFullChatbot = document.querySelector('codenula-fullchatbot') !== null;
 =======
   // Check if <flowise-fullchatbot> is present in the DOM
-  const isFullChatbot = document.querySelector('flowise-fullchatbot') !== null;
+  const isFullChatbot = document.querySelector('codenula-fullchatbot') !== null;
 >>>>>>> upstream/main
   const paddingClass = isFullChatbot ? 'px-4' : 'px-12';
 

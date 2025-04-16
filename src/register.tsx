@@ -10,7 +10,7 @@ export const registerWebComponents = () => {
   customElement('codenula-fullchatbot', defaultBotProps, Full);
   customElement('codenula-chatbot', defaultBotProps, Bubble);
 =======
-  customElement('flowise-fullchatbot', defaultBotProps, Full);
-  customElement('flowise-chatbot', defaultBotProps, Bubble);
+  customElement('codenula-fullchatbot', defaultBotProps, Full);
+  customElement('codenula-chatbot', defaultBotProps, Bubble);
 >>>>>>> upstream/main
 };

@@ -19,8 +19,8 @@ export const initFull = (props: BotProps & { id?: string }) => {
   const fullElement = props.id ? document.getElementById(props.id) : document.querySelector('codenula-fullchatbot');
   if (!fullElement) throw new Error('<codenula-fullchatbot> element not found.');
 =======
-  const fullElement = props.id ? document.getElementById(props.id) : document.querySelector('flowise-fullchatbot');
-  if (!fullElement) throw new Error('<flowise-fullchatbot> element not found.');
+  const fullElement = props.id ? document.getElementById(props.id) : document.querySelector('codenula-fullchatbot');
+  if (!fullElement) throw new Error('<codenula-fullchatbot> element not found.');
 >>>>>>> upstream/main
   Object.assign(fullElement, props);
   elementUsed = fullElement;
@@ -31,7 +31,7 @@ export const init = (props: BotProps) => {
 <<<<<<< HEAD
   const element = document.createElement('codenula-chatbot');
 =======
-  const element = document.createElement('flowise-chatbot');
+  const element = document.createElement('codenula-chatbot');
 >>>>>>> upstream/main
   Object.assign(element, props);
   document.body.appendChild(element);

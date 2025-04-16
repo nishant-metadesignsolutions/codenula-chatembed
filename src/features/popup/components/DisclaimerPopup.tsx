@@ -98,7 +98,7 @@ export const DisclaimerPopup = (props: DisclaimerPopupProps) => {
 =======
             innerHTML={
               popupProps.message ??
-              'By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a>.'
+              'By using this chatbot, you agree to the <a target="_blank" href="https://codenula.com/terms">Terms & Condition</a>.'
             }
           />
 

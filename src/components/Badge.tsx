@@ -54,7 +54,7 @@ export const Badge = (props: Props) => {
 <<<<<<< HEAD
             href={props.footer?.companyLink ?? 'https://codenula.com/'}
 =======
-            href={props.footer?.companyLink ?? 'https://flowiseai.com'}
+            href={props.footer?.companyLink ?? 'https://codenula.com'}
 >>>>>>> upstream/main
             target="_blank"
             rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export const Badge = (props: Props) => {
 <<<<<<< HEAD
             <span>&nbsp;{props.footer?.company ?? 'Codenula'}</span>
 =======
-            <span>&nbsp;{props.footer?.company ?? 'Flowise'}</span>
+            <span>&nbsp;{props.footer?.company ?? 'Codenula'}</span>
 >>>>>>> upstream/main
           </a>
         </span>
