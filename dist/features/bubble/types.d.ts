@@ -48,6 +48,11 @@ export type ChatWindowTheme = {
     showAgentMessages?: boolean;
     title?: string;
     titleAvatarSrc?: string;
+<<<<<<< HEAD
+=======
+    titleTextColor?: string;
+    titleBackgroundColor?: string;
+>>>>>>> upstream/main
     welcomeMessage?: string;
     errorMessage?: string;
     backgroundColor?: string;
@@ -99,6 +104,11 @@ export type DisclaimerPopUpTheme = {
     buttonText?: string;
     blurredBackgroundColor?: string;
     backgroundColor?: string;
+<<<<<<< HEAD
+=======
+    denyButtonBgColor?: string;
+    denyButtonText?: string;
+>>>>>>> upstream/main
 };
 export type DateTimeToggleTheme = {
     date?: boolean;

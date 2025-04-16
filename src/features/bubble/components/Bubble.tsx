@@ -97,7 +97,11 @@ export const Bubble = (props: BubbleProps) => {
           'background-repeat': 'no-repeat',
           'z-index': 42424242,
           bottom: `${Math.min(buttonPosition().bottom + buttonSize + 10, window.innerHeight - chatWindowBottom)}px`,
+<<<<<<< HEAD
           right: `${Math.min(buttonPosition().right, window.innerWidth - 410)}px`,
+=======
+          right: `${Math.max(0, Math.min(buttonPosition().right, window.innerWidth - (bubbleProps.theme?.chatWindow?.width ?? 410) - 10))}px`,
+>>>>>>> upstream/main
         }}
         class={
           `fixed sm:right-5 rounded-lg w-full sm:w-[400px] max-h-[704px]` +
@@ -130,6 +134,11 @@ export const Bubble = (props: BubbleProps) => {
               showAgentMessages={bubbleProps.theme?.chatWindow?.showAgentMessages}
               title={bubbleProps.theme?.chatWindow?.title}
               titleAvatarSrc={bubbleProps.theme?.chatWindow?.titleAvatarSrc}
+<<<<<<< HEAD
+=======
+              titleTextColor={bubbleProps.theme?.chatWindow?.titleTextColor}
+              titleBackgroundColor={bubbleProps.theme?.chatWindow?.titleBackgroundColor}
+>>>>>>> upstream/main
               welcomeMessage={bubbleProps.theme?.chatWindow?.welcomeMessage}
               errorMessage={bubbleProps.theme?.chatWindow?.errorMessage}
               poweredByTextColor={bubbleProps.theme?.chatWindow?.poweredByTextColor}
@@ -151,6 +160,10 @@ export const Bubble = (props: BubbleProps) => {
               disclaimer={bubbleProps.theme?.disclaimer}
               dateTimeToggle={bubbleProps.theme?.chatWindow?.dateTimeToggle}
               renderHTML={props.theme?.chatWindow?.renderHTML}
+<<<<<<< HEAD
+=======
+              closeBot={closeBot}
+>>>>>>> upstream/main
             />
           </div>
         </Show>

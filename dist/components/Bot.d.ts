@@ -87,6 +87,11 @@ export type BotProps = {
     showAgentMessages?: boolean;
     title?: string;
     titleAvatarSrc?: string;
+<<<<<<< HEAD
+=======
+    titleTextColor?: string;
+    titleBackgroundColor?: string;
+>>>>>>> upstream/main
     fontSize?: number;
     isFullPage?: boolean;
     footer?: FooterTheme;
@@ -100,6 +105,10 @@ export type BotProps = {
     disclaimer?: DisclaimerPopUpTheme;
     dateTimeToggle?: DateTimeToggleTheme;
     renderHTML?: boolean;
+<<<<<<< HEAD
+=======
+    closeBot?: () => void;
+>>>>>>> upstream/main
 };
 export type LeadsConfig = {
     status: boolean;

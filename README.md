@@ -198,7 +198,7 @@ You can also customize chatbot with different configuration
           textColor: '#303235',
           text: 'Powered by',
           company: 'codenula',
-          companyLink: 'https://codenulaai.com',
+          companyLink: 'https://codenula.com',
         },
       },
     },

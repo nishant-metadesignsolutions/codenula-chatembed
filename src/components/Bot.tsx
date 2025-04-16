@@ -142,6 +142,11 @@ export type BotProps = {
   showAgentMessages?: boolean;
   title?: string;
   titleAvatarSrc?: string;
+<<<<<<< HEAD
+=======
+  titleTextColor?: string;
+  titleBackgroundColor?: string;
+>>>>>>> upstream/main
   fontSize?: number;
   isFullPage?: boolean;
   footer?: FooterTheme;
@@ -153,6 +158,10 @@ export type BotProps = {
   disclaimer?: DisclaimerPopUpTheme;
   dateTimeToggle?: DateTimeToggleTheme;
   renderHTML?: boolean;
+<<<<<<< HEAD
+=======
+  closeBot?: () => void;
+>>>>>>> upstream/main
 };
 
 export type LeadsConfig = {
@@ -245,6 +254,10 @@ const defaultWelcomeMessage = 'Hi there! How can I help?';
 
 const defaultBackgroundColor = '#ffffff';
 const defaultTextColor = '#303235';
+<<<<<<< HEAD
+=======
+const defaultTitleBackgroundColor = '#3B81F6';
+>>>>>>> upstream/main
 
 export const Bot = (botProps: BotProps & { class?: string }) => {
   // set a default value for showTitle if not set and merge with other props
@@ -471,9 +484,19 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
   };
 
   // Handle errors
+<<<<<<< HEAD
   const handleError = (message = 'Oops! There seems to be an error. Please try again.') => {
     setMessages((prevMessages) => {
       const messages: MessageType[] = [...prevMessages, { message: props.errorMessage || message, type: 'apiMessage' }];
+=======
+  const handleError = (message = 'Oops! There seems to be an error. Please try again.', preventOverride?: boolean) => {
+    let errMessage = message;
+    if (!preventOverride && props.errorMessage) {
+      errMessage = props.errorMessage;
+    }
+    setMessages((prevMessages) => {
+      const messages: MessageType[] = [...prevMessages, { message: errMessage, type: 'apiMessage' }];
+>>>>>>> upstream/main
       addChatMessage(messages);
       return messages;
     });
@@ -554,7 +577,11 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
           return; // everything's good
         } else if (response.status === 429) {
           const errMessage = (await response.text()) ?? 'Too many requests. Please try again later.';
+<<<<<<< HEAD
           handleError(errMessage);
+=======
+          handleError(errMessage, true);
+>>>>>>> upstream/main
           throw new Error(errMessage);
         } else if (response.status === 403) {
           const errMessage = (await response.text()) ?? 'Unauthorized';
@@ -746,7 +773,11 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
     try {
       uploads = await handleFileUploads(uploads);
     } catch (error) {
+<<<<<<< HEAD
       handleError('Unable to upload documents');
+=======
+      handleError('Unable to upload documents', true);
+>>>>>>> upstream/main
       return;
     }
 
@@ -1397,8 +1428,13 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
           <div
             class="flex flex-row items-center w-full h-[50px] absolute top-0 left-0 z-10"
             style={{
+<<<<<<< HEAD
               background: props.bubbleBackgroundColor,
               color: props.bubbleTextColor,
+=======
+              background: props.titleBackgroundColor || props.bubbleBackgroundColor || defaultTitleBackgroundColor,
+              color: props.titleTextColor || props.bubbleTextColor || defaultBackgroundColor,
+>>>>>>> upstream/main
               'border-top-left-radius': props.isFullPage ? '0px' : '6px',
               'border-top-right-radius': props.isFullPage ? '0px' : '6px',
             }}
@@ -1637,6 +1673,13 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
           buttonTextColor={props.disclaimer?.buttonTextColor}
           blurredBackgroundColor={props.disclaimer?.blurredBackgroundColor}
           backgroundColor={props.disclaimer?.backgroundColor}
+<<<<<<< HEAD
+=======
+          denyButtonBgColor={props.disclaimer?.denyButtonBgColor}
+          denyButtonText={props.disclaimer?.denyButtonText}
+          onDeny={props.closeBot}
+          isFullPage={props.isFullPage}
+>>>>>>> upstream/main
         />
       )}
     </>

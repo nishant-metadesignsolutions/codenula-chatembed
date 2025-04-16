@@ -28,8 +28,13 @@ export const SendButton = (props: SendButtonProps) => {
   );
 };
 export const DeleteButton = (props: SendButtonProps) => {
+<<<<<<< HEAD
   // Check if <codenula-fullchatbot> is present in the DOM
   const isFullChatbot = document.querySelector('codenula-fullchatbot') !== null;
+=======
+  // Check if <flowise-fullchatbot> is present in the DOM
+  const isFullChatbot = document.querySelector('flowise-fullchatbot') !== null;
+>>>>>>> upstream/main
   const paddingClass = isFullChatbot ? 'px-4' : 'px-12';
 
   return (
